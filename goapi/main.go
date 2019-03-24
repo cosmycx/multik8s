@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-const waitSeconds = 20
+const waitSeconds = 20 // simulate long work duration
 
 type server struct {
 	router *http.ServeMux
@@ -28,7 +28,7 @@ func main() {
 
 } // .main
 
-// Validate ...
+// upload ...
 func (s *server) upload(w http.ResponseWriter, r *http.Request) {
 
 	//TODO:

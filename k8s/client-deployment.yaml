@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+spec: 
+  replicas: 3
+  selector: 
+    matchLabels:
+      component: web
+  template:
+    metadata: 
+      labels:
+        component: web
+    spec: 
+      containers:
+        - name: client
+          image: webui/img
+          imagePullPolicy: Never
+          ports: 
+            - containerPort: 80
+
+
+# eval $(minikube docker-env)
+# docker build . -t webui/img
+# imagePullPolicy: Never
