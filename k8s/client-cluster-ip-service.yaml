@@ -7,5 +7,5 @@ spec:
   selector: 
     component: web
   ports:
-    - port: 4500
-      targetPort: 4500
+    - port: 80
+      targetPort: 80
